@@ -13,151 +13,33 @@
         
         <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(96065084, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/96065084" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
         
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>İzmir metro map</title>
         
-        <meta property="og:image" content="izmirrapidtransitmap.png" />
-        
-        <title>İzmir Metro Haritası</title>
-        
-        <script src="js/likely/likely.js"></script>
-        <script src="js/emerge/emerge.js"></script>
-
-        <link rel="stylesheet" type="text/css" href="s.css" />        
-        <link rel="stylesheet" href="js/likely/likely.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="s.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="custom-spinner" style="display: none">
-            <img src="img/layout.svg" id="custom-spinner__img" />
+        <h1>Yeni İzmir metro haritası</h1>
+        <div class="lang-switcher">
+            <span class="lang">TR</span>
+            <a class="lang" href="/en">EN</a>
         </div>
-        <header id="header" class="emerge" data-await="map_wrapper">
-            <h1 id="title">Yeni İzmir Hızlı<br />Ulaşım Haritası</h1>
-            <h2 id="sub-title"></h2>
-            <span class="lang-switcher">
-                <span class="lang lang_selected">TR</span>
-                <a rel="alternate" hreflang="en" class="lang lang_link" href="en">EN</a>
-                <a rel="alternate" hreflang="ru" class="lang lang_link" href="ru">RU</a>
-            </span>
-        </header>
-        <main id="main">
-            <div id="map_wrapper" class="emerge" data-spin="true" data-spin-element="custom-spinner">
-                <img id="map" src="img/izmirrapidtransit.svg" alt="İzmir Metro Haritası" />
-                <div id="hider"></div>
-            </div>
-            <section class="section section_share emerge" data-await="header">
-                <div id="buttons">
-                    <a target="_blank" href="izmirrapidtransitmap.png" class="button button_primary">Tam boyutlu PNG</a>
-                    <a target="_blank" href="izmirrapidtransitmap.png" class="button button_primary">Tam boyutlu PDF</a>
-                </div>
-                <div id="credits_summary">Sür. 1.0, Şub 2024. Harita <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> lisansı altında mevcuttur. <a href="#credits">Kullanma hakkında</a> daha fazla bilgi.</div>
-                <div id="buttons">
-                    <a href="https://paypal.me/evgenykatyshev" class="button button_secondary">PayPal aracılığıyla bağış yapın</a>
-                    <a href="https://www.redbubble.com/shop/ap/158309041" class="button button_secondary">Poster satın al</a>
-                </div>
-                <div id="share">
-                    <div class="likely" data-title="Yeni İzmir Hızlı Ulaşım Haritası">
-                        <div class="twitter" data-via="ekatyshev">Tweetle</div>
-                        <div class="facebook">Paylaş</div>
-                        <div class="whatsapp">Gönder</div>
-                        <div class="pinterest" data-media="izmirrapidtransitmap.png">Sabitle</div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section_geometry emerge" data-continue="true">
-                <h3 class="section__header">Şemadaki hatların şekli</h3>
-                <p>Bir ulaşım şeması klasik bir harita değildir. Eğer gerçek rota coğrafyasını gösterseydi, merkezi bölgelerde çok yoğun olurdu ve kenarlarda neredeyse boş olurdu. Bu yüzden bir ulaşım şeması, yolcuların nasıl gideceklerine karar vermeleri için önemli olan simgeleri koruyan, bozulmuş bir coğrafya kullanır.</p>
-                <p>İşte ulaşım sisteminin bir coğrafi haritada nasıl göründüğü, şemada nasıl gösterildiğiyle karşılaştırıldığında.</p>
-                <div class="comparing">
-                    <img id="lines_geographic" src="img/geo.svg" />
-                    <img id="lines_schematic" src="img/scheme.svg" />
-                </div>
-            </section>
-            <section class="section emerge" data-continue="true">
-                <h3 class="section__header">Üçgen ızgara</h3>
-                <p>60 derecelik üçgen ızgara, hatlarının gerçek coğrafyasıyla çok iyi uyum sağlar ve şemada yatay çizgilerin, durak etiketlerinin yerleştirilmesinde sorun yaratanları önlemeye izin verir. Tek istisna, Çiğli tramvay hattıdır, birkaç durakla birlikte yatay segmentlere sahiptir.</p>
-            </section>
-            <section class="section emerge" data-continue="true">
-                <h3 class="section__header">Aktarmalar</h3>
-                <p>Yeni harita aktarmaları daha doğru bir şekilde gösterir. Tramvay ve İZBAN arasındaki aktarma olan Alaybey ve Karşıyaka, cadde üzerinde 10 dakikalık yürüyüş anlamına gelir veya daha da önemlisi, Mavişehir'de aktarma yapmak yaklaşık 15 dakikalık bir yürüyüş anlamına gelir, artık haritada tipik aktarmalar olarak işaretlenmemiştir. Bunun yerine, yolcuların başka bir istasyona ulaşmak için harcamaları gereken zamanı gösteren kesikli bir çizgiyle gösterilir. Benzer şekilde, Üçkuyular ve Alsancak'taki feribot aktarmaları temsil edilir.</p>
-                <img src="img/transfers.svg" alt="" class="img" />
-            </section>
-            <section class="section section_ferry emerge" data-continue="true">
-                <h3 class="section__header">Vapurlar</h3>
-                <p>Vapur, İzmir'de yolcular için büyük bir zaman tasarrufu sağlayan önemli bir ulaşım biçimidir. Hızlı geçiş haritasında gösterilmemesi ciddi bir ihmaldir.</p>
-                <p>Vapur rotaları haritada iki tipe ayrılır: tüm gün hizmeti ve düzensiz. Tüm gün hizmeti, bu rotaların hafta içi ve hafta sonları boyunca tüm gün boyunca çalıştığı anlamına gelir. Bu tür rotalar kalın çizgilerle gösterilir. Düzensiz rotalar yalnızca hafta sonları çalışır veya günde en fazla 4 sefer yapar. Bu rotalar ince soluk çizgilerle gösterilir.</p>
-                <img src="img/gulf.svg" alt="ferry schema" class="img" />
-            </section>
-            <section class="section emerge" data-continue="true">
-                <h3 class="section__header">Renkler</h3>
-                <p>Yeni şemada hatların renkleri genel olarak resmi şemanın renklerini devralır. İZBAN <strong class="blue">mavisidir</strong>, metro <strong class="red">kırmızıdır</strong> ve tramvay hatları <strong class="green">yeşildir</strong>. Çiğli tramvay hattının farklı yönlere resmi olarak işaretlenmiş iki rengi vardır, iç kısım mavi ve dış kısım kırmızıdır. İZBAN ve metro hatlarından ayırt edilebilmesi için haritada <strong class="light_blue">açık mavi</strong> ve <strong class="light_red">açık kırmızı</strong> renklerle gösterilmiştir.</p>
-                <p>Tüm renk tonları renk körlüğü olan kişiler tarafından ayırt edilebilir olacak şekilde ayarlanmıştır.</p>
-                <div class="img__containter">
-                    <img src="img/color-blindness.png" alt="" class="img img_color img_full-with" />
-                </div>
-            </section>
-            <section class="section emerge" data-continue="true">
-                <h3 class="section__header">Görünümler</h3>
-                <p>Şema başlangıçta birkaç yıl içinde açılması planlanan Buca metro hattını göstermek üzere tasarlanmıştır. İnşa halindeki iki İZBAN istasyonu da özel işaretlerle gösterilmiştir.</p>
-                <p>Mavişehir İZBAN istasyonuna tramvay hattı ve Bornova'nın merkezindeki metro istasyonu için yer ayrılmış, ancak inşaatın başlama ve hatta bitiş koşullarının belirsizliği nedeniyle haritada gizlenmişti. Diğer metro ve tramvay hatlarının yeni hatları aynı nedenle gösterilmemiştir.</p>
-                <img src="img/prospects.svg" alt="" />
-            </section>
-            <section class="section emerge" data-continue="true">
-                <h3 class="section__header">İZBAN</h3>
-                <p>İZBAN sistemi, haritada temsil edilmesi gereken bir dizi özelliğe sahiptir.</p>
-                <p>İZBAN'ın yönlendirilmesi, Kuzey ve Güney yönlerine dayanmaktadır ve genel olarak gerçek yönlerle her zaman örtüşmez ve genel olarak yolcular için açık değildir. Yönler, insanların doğru yöne ulaşmasına yardımcı olmak için haritada çift oklarla gösterilir.</p>
-                <p>Her iki yönde de tek bir terminal istasyonu yoktur. Trenlerin yarısı rotayı son istasyonda değil, daha erken bitiriyor. Bu tür istasyonlar, hattaki son istasyonlar gibi daha büyük yazı tipiyle işaretlenmiştir. Bu, yolcuların haritadaki panoda gösterilen istasyonun adını bulmasını kolaylaştırır.</p>
-                <p>Hattın Tepeköy'den Selçuk'a kadar olan kısmı ayrı bir hat gibi çalışıyor. İzmir'den Selçuk'a veya tersi yönde gitmek için Tepeköy'de aktarma yapmanız gerekir. Bu segment, farklı bir renkte belirli bir çizgi olarak gösterilir. Transfer gerektirmeyen İZBAN'ın geri kalanı bazı resmi diyagramlardan farklı olarak tek renkte gösteriliyor.</p>
-                <img src="img/izban.svg" alt="" />
-            </section>
-            <section class="section emerge" data-continue="true">
-                <h3 class="section__header">Logolar</h3>
-                <p>Şu anda metro, tramvay ve İZBAN logolarının etiketsiz çeşitleri olmadığı için küçük boyutlarda kötü görünüyor. Yeni harita için yeni logolar yapıldı. Tanınabilir olmak için orijinal simgelerin ana fikrini miras alıyorlar ancak yeni simgeler daha modern ve daha net bir forma sahip ve etiketsiz versiyonlara sahip.</p>
-                <img src="../img/logos.svg" alt="" class="img img_full-with" />
-            </section>
-            <section class="section emerge" data-continue="true">
-                <h3 class="section__header">Haritanın nasıl oluşturulduğu</h3>
-                <div id="video">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oQvknO-4uPA?si=Din9QwM6R5Iw0CMT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </section>
-            <section class="section section_share emerge" data-continue="true">
-                <div id="buttons">
-                    <a target="_blank" href="izmirrapidtransitmap.png" class="button button_primary">Tam boyutlu PNG</a>
-                    <a target="_blank" href="izmirrapidtransitmap.png" class="button button_primary">Tam boyutlu PDF</a>
-                </div>
-                <div id="credits_summary">Sür. 1.0, Şub 2024. Harita <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> lisansı altında mevcuttur. <a href="#credits">Kullanma hakkında</a> daha fazla bilgi.</div>
-                <div id="buttons">
-                    <a href="https://paypal.me/evgenykatyshev" class="button button_secondary">PayPal aracılığıyla bağış yapın</a>
-                    <a href="#" class="button button_secondary">Poster satın al</a>
-                </div>
-                <div id="share">
-                    <div class="likely" data-title="Yeni İzmir Hızlı Ulaşım Haritası">
-                        <div class="twitter" data-via="ekatyshev">Tweetle</div>
-                        <div class="facebook">Paylaş</div>
-                        <div class="whatsapp">Gönder</div>
-                        <div class="pinterest" data-media="izmirrapidtransitmap.png">Sabitle</div>
-                    </div>
-                </div>
-            </section>
-            <section class="section emerge" data-continue="true" id="credits">
-                <h3 class="section__header">Yazarlar</h3>
-                <div class="bio">
-                    <img class="portrait" src="img/portrait.jpg" alt="Evgeny Katyshev" />
-                    <div>
-                        <p>Evgeny Katyshev tarafından tasarlandı. İzmir'de bulunan EPAM'ın kullanıcı deneyimi tasarımcısı.</p>
-                        <p>Ek katkıda bulunanlar:</p>
-                        <ul>
-                            <li>Ali Soyer, çevirmen</li>
-                            <li>Ali Soyer, ön uç geliştirici</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </main>
+        <h2>Yeni hatlar!<br />Yeni şema!</h2>
+        <div class="section">
+            <p class="coming-soon">Şubat 2024'te geliyor</p>
+        </div>
+        <div class="section">
+            <p class="coming-soon-note">Narlıdere'ye metro ve Çiğli'ye<br />tramvay hattıyla birlikte.</p>
+        </div>
+        <div class="section">
+            <p>İzmir'ın hızlı transit ağına ait yepyeni resmi olmayan bir şema.</p>
+        </div>
+        <div class="section">
+            <p class="contact"><a href="mailto:eugkat@gmail.com">Ulaşın</a></p>
+        </div>
     </body>
 </html>
