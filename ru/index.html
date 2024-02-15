@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html data-page="construction" data-version="1.27.0" lang="ru">
+    <head>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1SZ8PMDPN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-J1SZ8PMDPN');
+        </script>
+        
+        <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(96065084, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/96065084" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta property="og:image" content="izmirrapidtransitmap.png" />
+        
+        <title>Карта метро Измира</title>
+        
+        <script src="../js/likely/likely.js"></script>
+        <script src="../js/emerge/emerge.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../s.css" />        
+        <link rel="stylesheet" href="../js/likely/likely.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div id="custom-spinner" style="display: none">
+            <img src="img/layout.svg" id="custom-spinner__img" />
+        </div>
+        <header id="header" class="emerge" data-await="map_wrapper">
+            <h1 id="title">Новая схема<br />метро Измира</h1>
+            <h2 id="sub-title"></h2>
+            <span class="lang-switcher">
+                <a rel="alternate" hreflang="tr" class="lang lang_link" href="../">TR</a>
+                <a rel="alternate" hreflang="en" class="lang lang_link" href="../en">EN</a>
+                <span class="lang lang_selected">RU</span>
+            </span>
+        </header>
+        <main id="main">
+            <div id="map_wrapper" class="emerge" data-spin="true" data-spin-element="custom-spinner">
+                <img id="map" src="../img/izmirrapidtransit.svg" alt="Izmir metro map" />
+                <div id="hider"></div>
+            </div>
+            <section class="section section_share">
+                <div id="buttons">
+                    <a target="_blank" href="izmirrapidtransitmap.png" class="button button_primary">Полный размер в PNG</a>
+                    <a target="_blank" href="izmirrapidtransitmap.png" class="button button_primary">Полный размер в PDF</a>
+                </div>
+                <div id="credits_summary">Вер. 1.0, Фев. 2024. Карта доступна по лицензии <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> . Подробнее <a href="#credits">об использовании</a>.</div>
+                <div id="buttons">
+                    <a href="https://paypal.me/evgenykatyshev" class="button button_secondary">Donate via PayPal</a>
+                    <a href="https://www.redbubble.com/shop/ap/158309041" class="button button_secondary">Buy poster</a>
+                </div>
+                <div id="share">
+                    <div class="likely" data-title="Yeni İzmir Hızlı Ulaşım Haritası">
+                        <div class="twitter" data-via="ekatyshev">Твитнуть</div>
+                        <div class="facebook">Поделиться</div>
+                        <div class="whatsapp">Отправить</div>
+                        <div class="pinterest" data-media="izmirrapidtransitmap.png">Запинить</div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_geometry emerge" data-continue="true">
+                <h3 class="section__header">Форма линий на схеме</h3>
+                <p>Схема транспорта – это не классическая карта. Если бы она показывал реальную географию маршрутов, то она была бы слишком плотной в центральных районах и почти пустой по краям. Поэтому в транспортных схемах используется искаженная география, в которой сохраняются ориентиры, которые имеют значение для выбора пассажирами маршрута.</p>
+                <p>Вот как транспортная система выглядит на географической карте в сравнении с тем, как это показано на схеме.</p>
+                <div class="comparing">
+                    <img id="lines_geographic" src="../img/geo.svg" />
+                    <img id="lines_schematic" src="../img/scheme.svg" />
+                </div>
+            </section>
+            <section class="section emerge" data-continue="true">
+                <h3 class="section__header">Треугольная сетка</h3>
+                <p>60-градусная треугольная сетка очень хорошо соответствует фактической географии линий и позволяет избежать горизонтальных отрезков на схеме, с которыми возникают проблемы с размещением подписей остановок. Единственным исключением является трамвайная линия в Чили, у которой есть пара горизонтальных участков с несколькими остановками.</p>
+            </section>
+            <section class="section emerge" data-continue="true">
+                <h3 class="section__header">Пересадки</h3>
+                <p>На новой карте пересадки показываются более точно. Алайбей и Каршияка, где пересадка между трамваем и İZBAN представляет собой 10-минутную прогулку по улице, или Мавишехир, где для пересадки потребуется пройти около 15 минут, больше не отмечены на карте как обычные пересадки. Вместо этого они показаны пунктирной линией со временем, которое потребуется пассажирам, чтобы добраться до другой станции. Точно так же показаны пересадки на паром в Учкуйуларе и Алсанджаке.</p>
+                <img src="../img/transfers.svg" alt="" class="img" />
+            </section>
+            <section class="section emerge" data-continue="true">
+                <h3 class="section__header">Паромы</h3>
+                <p>Паром — важный вид транспорта в Измире, который экономит пассажирам много времени. Не показать его на карте скоростного транспорта — серьёзное упущение.</p>
+                <p>Маршруты паромов на карте разделены на два типа: регулярные и нерегулярные. Регулярные маршруты работают в течение всего дня как по будням, так и по выходным. Такие маршруты показаны толстыми линиями. Нерегулярные маршруты работают только по выходным или имеют до 4 рейсов в день. Эти маршруты изображены тонкими бледными линиями.</p>
+                <img src="../img/gulf.svg" alt="ferry schema" class="img" />
+            </section>
+            <section class="section emerge" data-continue="true">
+                <h3 class="section__header">Цвета</h3>
+                <p>На новой схеме цвета линий в общем наследуют цвета официальной схемы. İZBAN — <strong class="blue">синий</strong>, метро — <strong class="red">красное</strong>, а трамвайные линии — <strong class="green">зелёные</strong>. Разные направления трамвайной линии в Чили официально обозначены двумя цветами: внутреннее — синим, а внешнее — красным. Чтобы их отличить от линий İZBAN и метро, на карте они изображены <strong class="light_blue">светло-синим</strong> и <strong class="light_red">светло-красным</strong> цветами.</p>
+                <p>Оттенки всех цветов подобраны так, чтобы они были различимы людьми с дальтонизмом.</p>
+                <div class="img__containter">
+                    <img src="../img/color-blindness.png" alt="" class="img img_color img_full-with" />
+                </div>
+            </section>
+            <section class="section emerge" data-continue="true">
+                <h3 class="section__header">Перспективы</h3>
+                <p>Схема изначально сделана с учётом отображения линии метро в Буджу, которая должна открыться через несколько лет. Также две строящиеся станции İZBAN обозначены специальным знаком.</p>
+                <p>Для трамвайной линии до станции İZBAN в Мавишехире и для станции метро в центре Борновы зарезервировано место, но сами они скрыты из-за неясных сроков начала строительства, а, тем более, его окончания. Другие новые линии метро и трамвая не показаны по тем же причинам.</p>
+                <img src="../img/prospects.svg" alt="" />
+            </section>
+            <section class="section emerge" data-continue="true">
+                <h3 class="section__header">İZBAN</h3>
+                <p>İZBAN имеет ряд особенностей, которые необходимо отразить на карте.</p>
+                <p>Навигация на İZBAN основана на направлениях на север и юг, которые не всегда совпадают с фактическими направлениями и не очевидны для пассажиров в целом. На карте направления показаны парами стрелок, чтобы помочь людям найти нужное.</p>
+                <p>В обоих направлениях нет единых конечных станций. Половина поездов заканчивает маршрут раньше, не на последней станции направления. Такие станции выделены более крупным шрифтом, как и последние на линии. Так пассажирам проще найти на карте название станции, отображенной на табло.</p>
+                <p>Участок линии от станции Тепекёй до Сельчука работает как отдельная линия. Чтобы добраться до Сельчука из Измира или наоборот вам нужно сделать пересадку на станции Тепекёй. Этот участок показан как отдельная линия другого цвета. Весь остальной İZBAN, где не требуется пересадок, показан одним цветом, в отличие от некоторых официальных схем.</p>
+                <img src="../img/izban.svg" alt="" class="img img_full-with" />
+            </section>
+            <section class="section emerge" data-continue="true">
+                <h3 class="section__header">Логотипы</h3>
+                <p>Сейчас логотипы метро, трамвая и İZBAN плохо выглядят в мелких размерах, поскольку у них нет вариантов без надписей. Для новой карты были созданы новые версии логотипов. Они сохраняют основную идею оригинальных значков, чтобы быть узнаваемыми, но имеют более современную и четкую форму и имеют варианты без надписей.</p>
+                <img src="../img/logos.svg" alt="" class="img img_full-with" />
+            </section>
+            <section class="section emerge" data-continue="true">
+                <h3 class="section__header">Как создавалась карта</h3>
+                <div id="video">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oQvknO-4uPA?si=Din9QwM6R5Iw0CMT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="section section_share emerge" data-continue="true">
+                <div id="buttons">
+                    <a target="_blank" href="izmirrapidtransitmap.png" class="button button_primary">Полный размер в PNG</a>
+                    <a target="_blank" href="izmirrapidtransitmap.png" class="button button_primary">Полный размер в PDF</a>
+                </div>
+                <div id="credits_summary">Вер. 1.0, Фев. 2024. Карта доступна по лицензии <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> . Подробнее <a href="#credits">об использовании</a>.</div>
+                <div id="buttons">
+                    <a href="https://paypal.me/evgenykatyshev" class="button button_secondary">Задонатить через PayPal</a>
+                    <a href="#" class="button button_secondary">Купить постер</a>
+                </div>
+                <div id="share">
+                    <div class="likely" data-title="Yeni İzmir Hızlı Ulaşım Haritası">
+                        <div class="twitter" data-via="ekatyshev">Твитнуть</div>
+                        <div class="facebook">Поделиться</div>
+                        <div class="whatsapp">Отправить</div>
+                        <div class="pinterest" data-media="izmirrapidtransitmap.png">Запинить</div>
+                    </div>
+                </div>
+            </section>
+            <section class="section emerge" data-continue="true" id="credits">
+                <h3 class="section__header">Авторы</h3>
+                <div class="bio">
+                    <img class="portrait" src="../img/portrait.jpg" alt="Evgeny Katyshev" />
+                    <div>
+                        <p>Дизайн схемы — Евгений Катышев, UX-дизайнер в EPAM.</p>
+                        <p>Помогали в создании:</p>
+                        <ul>
+                            <li>Ali Soyer, переводчик</li>
+                            <li>Ali Soyer, front-end разработчик</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
