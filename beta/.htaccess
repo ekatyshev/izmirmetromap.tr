@@ -1,0 +1,7 @@
+AddDefaultCharset utf-8
+
+RewriteEngine On
+
+# add trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*[^/]$ /$0/ [L,R=301]
