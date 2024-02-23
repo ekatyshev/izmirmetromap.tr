@@ -353,6 +353,11 @@ strong {
     display: block;
 }
 
+.contributors {
+    padding: 0 0 0 95px;
+    clear: both;
+}
+
 .social-links {
     display: block;
     padding: 0 20px;
