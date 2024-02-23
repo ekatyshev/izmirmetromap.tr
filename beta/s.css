@@ -28,6 +28,18 @@ body {
     }
 }
 
+@keyframes rotating {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 #custom-spinner {
     position: fixed;
     width: 100%;
@@ -38,15 +50,15 @@ body {
 }
 
 #custom-spinner__img {
-    width: 40%;
+    width: 40px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin: -20%;
-    animation-name: swaying;
-    animation-duration: 40s;
+    margin: -20px;
+    animation-name: rotating;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
 }
 
 #header {
