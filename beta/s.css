@@ -13,21 +13,6 @@ body {
     color: #334;
 }
 
-@keyframes swaying {
-    0% {
-        width: 40%;
-        margin: -20%;
-    }
-    50% {
-        width: 80%;
-        margin: -40%;
-    }
-    100% {
-        width: 40%;
-        margin: -20%;
-    }
-}
-
 @keyframes rotating {
     0% {
         transform: rotate(0);
