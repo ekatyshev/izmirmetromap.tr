@@ -407,6 +407,10 @@ strong {
     fill: #fff;
 }
 
+.social-link_mastodon:hover {
+    background: #563acc;
+}
+
 .social-link_twitter:hover {
     background: #000;
 }
